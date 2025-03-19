@@ -20,3 +20,14 @@ class MultilingualGreeterTestV2(TestCase):
 
         actual = multilingual_greeter_v2.new_key_input(languages)
         self.assertEqual(4, actual)
+
+    @patch('builtins.input', return_value= "German")
+    def test_new_language_input(self, user_input):
+        languages = {
+            1: "English",
+            2: "Spanish",
+            3: "Portuguese"
+        }
+
+        actual = multilingual_greeter_v2.new_language_option_input(languages)
+        self.assertEqual("German", actual)
