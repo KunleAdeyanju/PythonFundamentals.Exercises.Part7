@@ -7,13 +7,13 @@ from typing import Dict
         Handling addition of new languages
 """
 def new_key_input(lang_options: Dict[int, str]) -> int: 
-    key = input("Please enter a new key\n")
+    key = input("Please enter new key\n")
     while True:
         if key in lang_options:
             key = input("That Key already exists, please enter another\n")
         else:
             break
-    return int(key)
+    return key
 
 
 def new_language_option_input(lang_options: Dict[int, str]) -> str:
