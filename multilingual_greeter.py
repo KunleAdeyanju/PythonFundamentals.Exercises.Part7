@@ -13,7 +13,7 @@ lang_dict = {
 # Example: Key = 1. Value = 'What is your name?'.
 name_prompt_dict = {
     1:"Whats is your name?", 
-    2:"'¿Cómo te llamas?'", 
+    2:"¿Cómo te llamas?", 
     3:"Qual é o seu nome?"
 }
 
@@ -76,7 +76,7 @@ def get_name_input(name_prompt_options: Dict[int, str], lang_choice: int) -> str
     :return:
     """
     # remove pass statement and implement me
-    return name_prompt_options[lang_choice]
+    return str (name_prompt_options[lang_choice])
 
 
 def name_input(name_prompt: str) -> str:
@@ -87,7 +87,7 @@ def name_input(name_prompt: str) -> str:
     :return: The user's response when asked for their name
     """
     # remove pass statement and implement me
-    return input("What is your name")
+    return input(name_prompt)
 
 def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> None:
     """
